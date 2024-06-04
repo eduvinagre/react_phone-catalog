@@ -4,7 +4,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
-    '@mate-academy/eslint-config-react-typescript',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
