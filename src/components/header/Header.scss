@@ -1,0 +1,206 @@
+@import '../../assets/scss/variables.scss';
+
+$header-height-mobile-tablet: 48px;
+$header-height-desktop: 64px;
+
+.header {
+  @include font-uppercase-desktop;
+
+  background-color: $color-black;
+  box-shadow: 0 1px 0 0 $color-surface-2;
+  width: 100%;
+  min-width: 320px;
+
+  &__content {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    height: $header-height-mobile-tablet;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include on-desktop {
+      height: $header-height-desktop;
+    }
+  }
+
+  &__left-part {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: $header-height-mobile-tablet;
+
+    @include on-desktop {
+      height: $header-height-desktop;
+    }
+  }
+
+  &__nav {
+    display: none;
+    height: $header-height-mobile-tablet;
+
+    @include on-tablet {
+      box-sizing: border-box;
+      display: block;
+    }
+
+    @include on-desktop {
+      height: $header-height-desktop;
+    }
+  }
+
+  &__logo {
+    padding: 0;
+    box-sizing: border-box;
+    height: $header-height-mobile-tablet;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+    @include on-desktop {
+      margin-right: 24px;
+      height: $header-height-desktop;
+    }
+  }
+
+  &__logo img {
+    height: 22px;
+    width: 64px;
+    margin: 13px 16px;
+
+    @include on-desktop {
+      height: 28px;
+      width: 80px;
+      margin: 18px 24px;
+    }
+  }
+
+  &__right-part {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav {
+  &__list {
+    margin: 0;
+    height: $header-height-mobile-tablet;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+    @include on-desktop {
+      height: $header-height-desktop;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    line-height: $header-height-mobile-tablet;
+    margin-right: 12px;
+    height: $header-height-mobile-tablet;
+
+    @include on-desktop {
+      line-height: $header-height-desktop;
+      margin-right: 44px;
+      height: $header-height-desktop;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    height: $header-height-mobile-tablet;
+    text-decoration: none;
+    color: $color-secondary;
+    line-height: $header-height-mobile-tablet;
+    position: relative;
+    transition: color 0.3s;
+
+    @include on-desktop {
+      line-height: $header-height-desktop;
+      height: $header-height-desktop;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 4px;
+      background-color: $color-white;
+      margin-bottom: 1px;
+      transition:
+        width 0.3s ease-in-out,
+        left 0.3s ease-in-out;
+    }
+  }
+
+  &__link:hover {
+    color: $color-white;
+  }
+}
+
+.is-active {
+  color: $color-white;
+
+  &::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.right-part {
+  &__item-box {
+    display: flex;
+    box-shadow: -1px 0 0 0 $color-surface-2;
+  }
+
+  &__icon {
+    width: 48px;
+    height: $header-height-mobile-tablet;
+
+    @include on-desktop {
+      width: 64px;
+      height: $header-height-desktop;
+    }
+  }
+
+  &__icon--favorite {
+    display: none;
+    background-image: url('./img/icons/heart-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @include on-tablet {
+      display: inline-block;
+    }
+  }
+
+  &__icon--cart {
+    display: none;
+    background-image: url('./img/icons/cart-btn-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @include on-tablet {
+      display: inline-block;
+    }
+  }
+
+  &__icon--menu-burger {
+    background-image: url('../../../public/img/icons/menu-burger-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @include on-tablet {
+      display: none;
+    }
+  }
+}
