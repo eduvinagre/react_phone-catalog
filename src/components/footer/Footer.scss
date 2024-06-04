@@ -1,0 +1,106 @@
+@import '../../assets/scss/variables';
+
+.footer {
+  @include pageGrid;
+
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 16px 32px;
+  background-color: $color-black;
+  border-top: 1px solid $color-elements;
+  gap: 32px;
+
+  @include on-tablet {
+    align-items: center;
+  }
+
+  @include on-desktop {
+    padding-block: 32px;
+  }
+
+  &__logo {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__actions {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 4 / 9;
+    }
+
+    @include on-desktop {
+      grid-column: 9 / 16;
+    }
+  }
+
+  &__top-button {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 9 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 20 / -1;
+    }
+  }
+}
+
+.logo {
+  height: fit-content;
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include on-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  @include on-desktop {
+    gap: 154px;
+  }
+
+  & > a {
+    @include font-uppercase-desktop;
+  }
+}
+
+.top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include on-tablet {
+    justify-content: flex-end;
+  }
+
+  &__text {
+    @include font-small-text-desktop;
+
+    color: $color-secondary;
+    margin: 0;
+  }
+
+  &__button {
+    width: 32px;
+    height: 32px;
+    background-color: $color-surface-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
