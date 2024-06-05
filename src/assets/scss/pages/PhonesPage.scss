@@ -27,8 +27,8 @@
 
   &__card {
     background-color: white;
-    height: 440px;
     grid-column: span 4;
+    grid-row: auto;
 
     @include on-tablet {
       grid-column: span 6;

@@ -1,5 +1,6 @@
 import '../assets/scss/pages/PhonesPage.scss';
 import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
+import Card from '../components/Card/Card';
 
 const PhonesPage = () => {
   return (
@@ -37,22 +38,7 @@ const PhonesPage = () => {
       </div>
       
       <ul className="products__list">
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
-        <li className="products__card"></li>
+        <Card />
       </ul>
     </div>
   );
