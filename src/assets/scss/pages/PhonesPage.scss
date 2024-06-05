@@ -1,4 +1,4 @@
-@import '../../assets/scss/variables.scss';
+@import '../variables.scss';
 
 .products {
 
@@ -22,13 +22,21 @@
     margin-top: 24px;
     padding: 0;
 
-    @include page-grid;
+    @include pageGrid;
   }
 
   &__card {
     background-color: white;
     height: 440px;
-    width: 100%;
+    grid-column: span 4;
+
+    @include on-tablet {
+      grid-column: span 6;
+    }
+
+    @include on-desktop{
+      grid-column: span 6;
+    }
   }
 
   &__filter {

@@ -1,5 +1,5 @@
-import './PhonesPage.scss';
-import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
+import '../assets/scss/pages/PhonesPage.scss';
+import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
 
 const PhonesPage = () => {
   return (
