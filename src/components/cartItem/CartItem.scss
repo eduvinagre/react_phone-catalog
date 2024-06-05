@@ -1,0 +1,105 @@
+@import '../../assets/scss/variables';
+
+.cart-item {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: $color-surface-1;
+
+  @include on-tablet {
+    padding: 24px;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+
+  @include on-tablet {
+    gap: 24px;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__img {
+    display: flex;
+    width: 80px;
+    height: 80px;
+  }
+
+  &__name {
+    @include font-body-text-desktop;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include on-tablet {
+    gap: 24px;
+  }
+
+  &__quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__price {
+    @include font-h3-desktop;
+
+    width: 80px;
+    text-align: right;
+
+    &::before {
+      content: '$';
+    }
+  }
+}
+
+.quantity {
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    background-color: $color-surface-2;
+    transition-duration: 300ms;
+
+    &:hover {
+      transition-duration: 300ms;
+      background-color: $color-icons;
+      cursor: pointer;
+    }
+
+    &--disabled {
+      background-color: transparent;
+      border: 1px solid $color-elements;
+
+      &:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+
+  &__number {
+    @include font-body-text-desktop;
+  }
+}
