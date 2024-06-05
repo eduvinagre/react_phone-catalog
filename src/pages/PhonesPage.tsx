@@ -1,12 +1,13 @@
 import '../assets/scss/pages/PhonesPage.scss';
 import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
 import Card from '../components/Card/Card';
+import Calculate from '../components/calculate/Calculate';
 
 const PhonesPage = () => {
   return (
     <div className="products__container products container">
       <BreadCrumbs />
-
+      <Calculate />
       <h1 className="products__title">Mobile phones</h1>
       <p className="products__quantity">
         <span className="products__quantityText">97 models</span>
