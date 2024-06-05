@@ -10,15 +10,15 @@ export const Footer = () => {
       </div>
 
       <div className="actions footer__actions">
-        <a className="actions__github" href="#">
+        <a className="actions__item" href="#">
           github
         </a>
 
-        <a className="actions__contacts" href="#">
+        <a className="actions__item" href="#">
           contacts
         </a>
 
-        <a className="actions__rigths" href="#">
+        <a className="actions__item" href="#">
           rigths
         </a>
       </div>
