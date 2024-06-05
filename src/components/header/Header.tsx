@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './Header.scss';
 
 export const Header: React.FC = () => {
@@ -13,24 +14,24 @@ export const Header: React.FC = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__left-part left-part">
-            <a href="#" className="header__logo">
+            <Link to="/" className="header__logo">
               <img
                 src="./img/logo.svg"
                 alt="logo"
               />
-            </a>
+            </Link>
 
             <nav className="nav header__nav">
               <ul className="nav__list">
                 {['Home', 'Phones', 'Tablets', 'Accessories'].map(page => (
                   <li key={page} className="nav__item">
-                    <a
-                      href="#"
+                    <Link
+                      to={`/${page.toLowerCase()}`}
                       className={`nav__link ${selected === page ? 'is-active' : ''}`}
                       onClick={() => handleNavClick(page)}
                     >
                       {page}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -39,15 +40,15 @@ export const Header: React.FC = () => {
 
           <div className="header__right-part right-part">
             <div className="right-part__item-box">
-              <a href="#" className="right-part__icon right-part__icon--favorite"></a>
+              <Link to="/" className="right-part__icon right-part__icon--favorite"></Link>
             </div>
 
             <div className="right-part__item-box">
-              <a href="#" className="right-part__icon right-part__icon--cart"></a>
+              <Link to="/" className="right-part__icon right-part__icon--cart"></Link>
             </div>
 
             <div className="right-part__item-box">
-              <a href="#" className="right-part__icon right-part__icon--menu-burger"></a>
+              <Link to="/" className="right-part__icon right-part__icon--menu-burger"></Link>
             </div>
           </div>
         </div>

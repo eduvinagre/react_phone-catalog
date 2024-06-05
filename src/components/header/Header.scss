@@ -108,12 +108,12 @@ $header-height-desktop: 64px;
     display: inline-block;
 
     line-height: $header-height-mobile-tablet;
-    margin-right: 12px;
+    margin-right: 32px;
     height: $header-height-mobile-tablet;
 
     @include on-desktop {
       line-height: $header-height-desktop;
-      margin-right: 44px;
+      margin-right: 64px;
       height: $header-height-desktop;
     }
   }
