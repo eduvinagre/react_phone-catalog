@@ -1,8 +1,13 @@
 import './assets/scss/variables.scss';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import { DefaultLayout } from './layouts/default.layout';
 import { HomePage } from './pages/HomePage';
-import { PageNotFound } from './pages/PageNotFound';
+import { PageNotFound } from './pages/pageNotFound/PageNotFound';
 import PhonesPage from './pages/PhonesPage/PhonesPage';
 
 export const App = () => (
