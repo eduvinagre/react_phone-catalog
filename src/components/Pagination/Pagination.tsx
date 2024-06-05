@@ -8,17 +8,11 @@ type Props = {
   setPage: (v: string) => void;
 };
 
-export const Pagination: React.FC<Props> = ({
-  pages,
-  currentPage,
-  setPage,
-}) => {
+export const Pagination: React.FC<Props> = ({ pages, currentPage, setPage }) => {
   const firstBlock = 0;
   const lastBlock = pages / 4 - 1;
 
-  const pagesArray = Array.from({ length: pages }, (_, index) =>
-    (1 + index).toString(),
-  );
+  const pagesArray = Array.from({ length: pages }, (_, index) => (1 + index).toString());
 
   const [currentBlock, setCurrentBlock] = useState(firstBlock);
 
@@ -41,7 +35,7 @@ export const Pagination: React.FC<Props> = ({
     if (currentPage === pages.toString()) {
       setCurrentBlock(lastBlock);
     }
-  }, [currentPage]);
+  }, [currentPage, lastBlock, pages]);
 
   const onLeftMove = () => {
     if (currentPage !== '1') {
@@ -66,9 +60,7 @@ export const Pagination: React.FC<Props> = ({
       <button className="pagination__left-slide" onClick={onLeftMove}>
         <div
           className={
-            isFirstBlock && isBlockFirstPage
-              ? 'icon icon-left-disabled'
-              : 'icon icon-left'
+            isFirstBlock && isBlockFirstPage ? 'icon icon-left-disabled' : 'icon icon-left'
           }
         />
       </button>
@@ -86,20 +78,18 @@ export const Pagination: React.FC<Props> = ({
         </li>
         {currentBlock !== 0 && <p className="pagination__slider-dots">...</p>}
         <ul className="pagination__slider-list" ref={list}>
-          {pagesArray
-            .slice(blockFirstPage - 1, blockLastPage + 1)
-            .map(pageNum => (
-              <li className="pagination__slider-item" key={pageNum}>
-                <button
-                  className={classNames('pagination__slider-num', {
-                    'pagination__slider-num-active': currentPage === pageNum,
-                  })}
-                  onClick={() => setPage(pageNum)}
-                >
-                  {pageNum}
-                </button>
-              </li>
-            ))}
+          {pagesArray.slice(blockFirstPage - 1, blockLastPage + 1).map(pageNum => (
+            <li className="pagination__slider-item" key={pageNum}>
+              <button
+                className={classNames('pagination__slider-num', {
+                  'pagination__slider-num-active': currentPage === pageNum,
+                })}
+                onClick={() => setPage(pageNum)}
+              >
+                {pageNum}
+              </button>
+            </li>
+          ))}
         </ul>
         {currentBlock !== lastBlock && (
           <>
@@ -107,8 +97,7 @@ export const Pagination: React.FC<Props> = ({
             <li className="pagination__slider-item" key={pages}>
               <button
                 className={classNames('pagination__slider-num', {
-                  'pagination__slider-num-active':
-                    currentPage === pages.toString(),
+                  'pagination__slider-num-active': currentPage === pages.toString(),
                 })}
                 onClick={() => setPage(pages.toString())}
               >
@@ -122,9 +111,7 @@ export const Pagination: React.FC<Props> = ({
       <button className="pagination__right-slide" onClick={onRightMove}>
         <div
           className={
-            isLastBlock && isBlockLastPage
-              ? 'icon icon-right-disabled'
-              : 'icon icon-right'
+            isLastBlock && isBlockLastPage ? 'icon icon-right-disabled' : 'icon icon-right'
           }
         />
       </button>

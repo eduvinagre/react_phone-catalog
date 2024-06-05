@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import './Header.scss';
 
 export const Header: React.FC = () => {
@@ -14,10 +14,7 @@ export const Header: React.FC = () => {
         <div className="header__content">
           <div className="header__left-part left-part">
             <a href="#" className="header__logo">
-              <img
-                src="./img/logo.svg"
-                alt="logo"
-              />
+              <img src="./img/logo.svg" alt="logo" />
             </a>
 
             <nav className="nav header__nav">
@@ -54,4 +51,4 @@ export const Header: React.FC = () => {
       </div>
     </header>
   );
-}
+};

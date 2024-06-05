@@ -1,5 +1,5 @@
 import './PhonesPage.scss';
-import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
 
 const PhonesPage = () => {
   return (
@@ -13,29 +13,21 @@ const PhonesPage = () => {
 
       <div className="products__filter filter">
         <div className="filter_sortBy sortBy">
-          <p className="sortBy__legend">
-            Sort by
-          </p>
-          <div className='sortBy__select'>
-            
-          </div>
+          <p className="sortBy__legend">Sort by</p>
+          <div className="sortBy__select"></div>
         </div>
 
         <div className="sortBy">
-          <p className="sortBy__legend">
-            Items on page
-          </p>
+          <p className="sortBy__legend">Items on page</p>
 
-          <div className='perPage__select'>
-            <div className='perPage__options-wrapper'>
-              <div className="perPage__option">
-                
-              </div>
+          <div className="perPage__select">
+            <div className="perPage__options-wrapper">
+              <div className="perPage__option"></div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <ul className="products__list">
         <li className="products__card"></li>
         <li className="products__card"></li>
@@ -56,6 +48,6 @@ const PhonesPage = () => {
       </ul>
     </div>
   );
-}
+};
 
 export default PhonesPage;
