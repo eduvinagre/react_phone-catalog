@@ -1,7 +1,6 @@
 @import '../../assets/scss/variables.scss';
 
 .products {
-
   &__title {
     @include font-h1-mobile;
     margin: 0;
@@ -35,7 +34,7 @@
     display: flex;
     margin-top: 32px;
     gap: 16px;
-    
+
     .sortBy {
       &__legend {
         @include font-small-text-desktop;
@@ -50,5 +49,3 @@
     }
   }
 }
-
-
