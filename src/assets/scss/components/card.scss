@@ -30,11 +30,11 @@
     border: 1px solid #3b3e4a;
   }
 
-  &__description{
+  &__description {
     .description__text {
       display: flex;
       justify-content: space-between;
-      
+
       @include font-small-text-desktop;
       color: $color-secondary;
 
@@ -55,7 +55,7 @@
       display: flex;
       justify-content: center;
       flex-grow: 6;
-      background-color: #905BFF;
+      background-color: #905bff;
       align-items: center;
       text-decoration: none;
       border: none;

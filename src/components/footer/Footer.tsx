@@ -1,4 +1,4 @@
-import './footer.scss';
+import '../../components/footer/Footer.scss';
 import logo from '../../../public/img/svg/logo.svg';
 import chevronUp from '../../../public/img/svg/chevron-up.svg';
 
@@ -19,7 +19,7 @@ export const Footer = () => {
         </a>
 
         <a className="actions__item" href="#">
-          rigths
+          rights
         </a>
       </div>
 
