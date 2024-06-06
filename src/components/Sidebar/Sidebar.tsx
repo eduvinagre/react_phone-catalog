@@ -7,9 +7,6 @@ import './Sidebar.scss';
 //*import { FavouritesContext } from '';*//
 //*import { CartContext } from '';*//
 
-
-
-
 type Props = {
   isMenuOpen: boolean;
   setIsMenuOpen: React.Dispatch<SetStateAction<boolean>>;
@@ -39,41 +36,22 @@ export const SideNavbar: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
     >
       <div className="navbar__top">
         <Logo />
-        <div
-          className="header__menu-button"
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <div className="header__menu-button" onClick={() => setIsMenuOpen(false)}>
           <div className="header__menu-button icon icon-close" />
         </div>
       </div>
 
       <nav className="navbar__list">
-        <NavLink
-          to="/"
-          className={getLinkClass}
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <NavLink to="/" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
           HOME
         </NavLink>
-        <NavLink
-          to="phones"
-          className={getLinkClass}
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <NavLink to="phones" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
           PHONES
         </NavLink>
-        <NavLink
-          to="tablets"
-          className={getLinkClass}
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <NavLink to="tablets" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
           TABLETS
         </NavLink>
-        <NavLink
-          to="/accessories"
-          className={getLinkClass}
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <NavLink to="/accessories" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
           ACCESSORIES
         </NavLink>
       </nav>
@@ -90,15 +68,9 @@ export const SideNavbar: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
             )}
           </div>
         </NavLink>
-        <NavLink
-          to="cart"
-          className={getFooterLinkClass}
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <NavLink to="cart" className={getFooterLinkClass} onClick={() => setIsMenuOpen(false)}>
           <div className="navbar__footer-button-cart icon">
-            {cartList.length > 0 && (
-              <p className="navbar__footer-counter icon">{productsInCart}</p>
-            )}
+            {cartList.length > 0 && <p className="navbar__footer-counter icon">{productsInCart}</p>}
           </div>
         </NavLink>
       </div>
