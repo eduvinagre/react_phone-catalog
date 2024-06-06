@@ -72,8 +72,6 @@ $header-height-desktop: 64px;
   }
 
   &__logo img {
-    height: 22px;
-    width: 64px;
     margin: 13px 16px;
 
     @include on-desktop {
@@ -204,7 +202,7 @@ $header-height-desktop: 64px;
   &__icon--favorite {
     display: none;
 
-    background-image: url('./img/icons/heart-icon.svg');
+    background-image: url('/img/icons/heart-icon.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -217,7 +215,7 @@ $header-height-desktop: 64px;
   &__icon--cart {
     display: none;
 
-    background-image: url('./img/icons/cart-btn-icon.svg');
+    background-image: url('/img/icons/cart-btn-icon.svg');
 
     background-position: center;
     background-repeat: no-repeat;
@@ -229,7 +227,7 @@ $header-height-desktop: 64px;
   }
 
   &__icon--menu-burger {
-    background-image: url('./img/icons/menu-burger-icon.svg');
+    background-image: url('/img/icons/menu-burger-icon.svg');
 
     background-position: center;
     background-repeat: no-repeat;

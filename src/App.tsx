@@ -5,6 +5,7 @@ import { HomePage } from './pages/home-page/HomePage';
 import { PageNotFound } from './pages/pagenotfound/PageNotFound';
 import PhonesPage from './pages/phonespage/PhonesPage';
 import { CartPage } from './pages/cartpage/CartPage';
+import './App.css';
 
 export const App = () => (
   <Router>
