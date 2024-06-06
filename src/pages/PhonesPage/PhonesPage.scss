@@ -1,0 +1,51 @@
+@import '../../assets/scss/variables.scss';
+
+.products {
+  &__title {
+    @include font-h1-mobile;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  &__quantity {
+    margin: 0;
+
+    &Text {
+      @include font-small-text-desktop;
+      color: $color-secondary;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 24px;
+    padding: 0;
+
+    @include page-grid;
+  }
+
+  &__card {
+    background-color: white;
+    height: 440px;
+    width: 100%;
+  }
+
+  &__filter {
+    display: flex;
+    margin-top: 32px;
+    gap: 16px;
+
+    .sortBy {
+      &__legend {
+        @include font-small-text-desktop;
+        color: $color-secondary;
+      }
+
+      option {
+        width: 187px;
+        height: 140px;
+        background-color: $color-secondary;
+      }
+    }
+  }
+}

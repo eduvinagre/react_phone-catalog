@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-
-import '../App.css';
-import { Header } from '../components/header';
+import './default.layout.scss';
+import { Header } from '../components/Header/Header';
+import { Footer } from '../components/Footer/Footer';
 // import { Navbar } from '../components/Navbar'; COMPONENT SUGGESTION
 
 export const DefaultLayout = () => {
@@ -10,11 +10,9 @@ export const DefaultLayout = () => {
       {/* <Navbar /> */}
       <Header />
 
-      <div className="section">
-        <div className="container">
-          <Outlet />
-        </div>
-      </div>
+      <Outlet />
+
+      <Footer />
     </div>
   );
 };
