@@ -1,21 +1,12 @@
-import { useNavigate } from 'react-router-dom';
+import { BackButton } from '../../components/back-button/BackButton';
 import './CartPage.scss';
 
 export const CartPage = () => {
-  const navigate = useNavigate();
-
-  const handleBackClick = () => {
-    navigate(-1);
-  }
-
   return (
     <div className="cart-page">
       <div className="container">
         <div className="cart-page__content">
-
-          <div className="cart-page__back-button back-button" onClick={handleBackClick}>
-            <div className="cart-page__back-icon back-icon"></div>
-          </div>
+          <BackButton />
 
           <h1 className="cart-page__title title">Cart</h1>
 
@@ -28,10 +19,8 @@ export const CartPage = () => {
 
             <div className="cart-page__checkout"></div>
           </div>
-
         </div>
       </div>
     </div>
-
   );
-}
+};

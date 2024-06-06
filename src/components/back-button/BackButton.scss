@@ -1,0 +1,18 @@
+@import '../../assets/scss/variables.scss';
+
+.back-button {
+  padding: 24px 0;
+
+  @include on-tablet {
+    padding: 40px 0 16px 0;
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    width: 66px;
+    height: 16px;
+
+    background-image: url('./img/icons/cart-back-button.svg');
+  }
+}
