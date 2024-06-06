@@ -5,17 +5,14 @@
 
   width: 100vw;
   box-sizing: border-box;
-  padding: 16px 32px;
+  padding: 32px 16px;
   background-color: $color-black;
   border-top: 1px solid $color-elements;
   gap: 32px;
 
   @include on-tablet {
     align-items: center;
-  }
-
-  @include on-desktop {
-    padding-block: 32px;
+    padding-inline: 32px;
   }
 
   &__logo {
@@ -73,8 +70,10 @@
     gap: 154px;
   }
 
-  & > a {
+  & > .actions__item {
     @include font-uppercase-desktop;
+
+    text-decoration: none;
   }
 }
 
@@ -102,5 +101,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: 300ms;
+
+    &:hover {
+      background-color: $color-icons;
+      transition-duration: 300ms;
+      cursor: pointer;
+    }
   }
 }
