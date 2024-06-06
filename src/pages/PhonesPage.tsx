@@ -1,6 +1,6 @@
 import '../assets/scss/pages/PhonesPage.scss';
 import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
-import Card from '../components/Card/Card';
+import Card from '../components/card/Card';
 
 const PhonesPage = () => {
   return (
