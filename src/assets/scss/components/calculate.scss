@@ -7,6 +7,13 @@
   flex-direction: column;
   gap: 16px;
   padding: 24px;
+  height: 135px;
+
+  @include on-desktop {
+    width: 33%;
+    height: 165px;
+    gap: 24px;
+  }
 
   &__infos {
     display: flex;
@@ -15,7 +22,7 @@
   }
 
   &__price {
-    @include font-h3-desktop;
+    @include font-h2-desktop;
     margin: 0;
   }
 
@@ -23,6 +30,10 @@
     @include font-small-text-desktop;
     color: $color-secondary;
     margin: 0;
+
+    @include on-desktop {
+      font-size: 14px;
+    }
   }
 
   &__line {
@@ -38,6 +49,11 @@
     border: none;
     text-align: center;
     height: 40px;
+    cursor: pointer;
+
+    @include on-desktop {
+      height: 48px;
+    }
 
     @include font-buttons-desktop;
   }
