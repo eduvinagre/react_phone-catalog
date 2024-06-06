@@ -16,15 +16,15 @@
 
   &__left-slide,
   &__right-slide {
-  @extend %small-button;
+    @extend %small-button;
 
-  background-color: $color-surface2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  transition-duration: $transition-duration;
-}
+    background-color: $color-surface2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition-duration: $transition-duration;
+  }
 
   &__slider {
     height: 100%;
@@ -65,5 +65,4 @@
       font-size: 15px;
     }
   }
-
 }

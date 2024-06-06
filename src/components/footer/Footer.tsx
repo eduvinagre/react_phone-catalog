@@ -1,4 +1,4 @@
-import './footer.scss';
+import '../../components/footer/Footer.scss';
 import logo from '../../../public/img/svg/logo.svg';
 import chevronUp from '../../../public/img/svg/chevron-up.svg';
 
@@ -10,16 +10,16 @@ export const Footer = () => {
       </div>
 
       <div className="actions footer__actions">
-        <a className="actions__github" href="#">
+        <a className="actions__item" href="#">
           github
         </a>
 
-        <a className="actions__contacts" href="#">
+        <a className="actions__item" href="#">
           contacts
         </a>
 
-        <a className="actions__rigths" href="#">
-          rigths
+        <a className="actions__item" href="#">
+          rights
         </a>
       </div>
 

@@ -1,7 +1,6 @@
 @import '../variables.scss';
 
 .products {
-
   &__title {
     @include font-h1-mobile;
     margin: 0;
@@ -34,7 +33,7 @@
       grid-column: span 6;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       grid-column: span 6;
     }
   }
@@ -43,7 +42,7 @@
     display: flex;
     margin-top: 32px;
     gap: 16px;
-    
+
     .sortBy {
       &__legend {
         @include font-small-text-desktop;
@@ -58,5 +57,3 @@
     }
   }
 }
-
-
