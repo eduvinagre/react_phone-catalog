@@ -52,6 +52,7 @@ export const Header: React.FC = () => {
                 to="/cart"
                 className={`right-part__icon right-part__icon--cart ${selected === 'Cart' ? 'is-active' : ''}`}
               ></Link>
+              <div className="right-part__icon--counter"></div>
             </div>
 
             <div className="right-part__item-box">
