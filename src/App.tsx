@@ -4,6 +4,7 @@ import { DefaultLayout } from './layouts/default.layout';
 import { HomePage } from './pages/HomePage';
 import { PageNotFound } from './pages/PageNotFound';
 import PhonesPage from './pages/PhonesPage/PhonesPage';
+import { CartPage } from './pages/cart-page';
 
 export const App = () => (
   <Router>
@@ -12,6 +13,7 @@ export const App = () => (
         <Route index element={<HomePage />} />
         <Route path="home" element={<Navigate to="/" replace />} />
         <Route path="phonespage" element={<PhonesPage />} />
+        <Route path='cart' element={<CartPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
