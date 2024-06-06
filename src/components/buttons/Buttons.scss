@@ -1,4 +1,4 @@
-@import 
+@import '../../assets/scss/variables.scss';
 
 .buttons {
   display: flex;
@@ -16,12 +16,12 @@
   height: 40px;
   width: 100%;
   border: 0;
-  background-color: var(--color-button);
+  background-color: var(--color-surface-1);
   transition: transform $transition-duration ease;
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 3px 13px 0 #17203166;
+    box-shadow: 0 3px 13px 0 #17203166; //verificar
     background-color: var(--color-button-hover);
   }
 }
@@ -46,14 +46,14 @@
   flex-shrink: 0;
   flex-grow: 0;
 
-  background-color: var(--color-icons);
-  border: 1px solid var(--color-surface);
+  background-color: var(--color-icons); //verificar
+  border: 1px solid var(--color-surface-2); //verificar
   box-sizing: border-box;
 
   cursor: pointer;
 
   &:hover {
-    border: 1px solid var(--color-primary);
-    background-color: var(--color-hover);
+    border: 1px solid var(--color-secondary); //verificar
+    background-color: var(--color-secondary); //verificar
   }
 }
