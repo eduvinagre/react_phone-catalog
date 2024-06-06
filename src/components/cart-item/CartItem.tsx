@@ -16,9 +16,7 @@ export const CartItem = () => {
           <img className="display__img-phone" src={imgPhone} alt="img-phone" />
         </div>
 
-        <p className="display__name">
-          Apple iPhone 11 Pro Max 64GB Gold (iMT9G2FS/A)
-        </p>
+        <p className="display__name">Apple iPhone 11 Pro Max 64GB Gold (iMT9G2FS/A)</p>
       </div>
 
       <div className="details cart-item__details">
