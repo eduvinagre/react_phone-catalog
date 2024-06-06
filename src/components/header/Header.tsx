@@ -1,13 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import './Header.scss';
 
 export const Header: React.FC = () => {
   const [selected, setSelected] = useState('Home');
+  const location = useLocation();
 
-  const handleNavClick = (page: string) => {
+  useEffect(() => {
+    const pathname = location.pathname;
+    const page = pathname === "/"
+      ? "Home"
+      : pathname
+        .slice(1)
+        .charAt(0)
+        .toUpperCase() + pathname.slice(2); 
+
     setSelected(page);
-  };
+  }, [location]);
 
   return (
     <header className="header">
@@ -28,7 +37,6 @@ export const Header: React.FC = () => {
                     <Link
                       to={`/${page.toLowerCase()}`}
                       className={`nav__link ${selected === page ? 'is-active' : ''}`}
-                      onClick={() => handleNavClick(page)}
                     >
                       {page}
                     </Link>
@@ -40,15 +48,24 @@ export const Header: React.FC = () => {
 
           <div className="header__right-part right-part">
             <div className="right-part__item-box">
-              <Link to="/" className="right-part__icon right-part__icon--favorite"></Link>
+              <Link 
+                to="/favorite" 
+                className={`right-part__icon right-part__icon--favorite ${selected === 'Favorite' ? 'is-active' : ''}`}
+              ></Link>
             </div>
 
             <div className="right-part__item-box">
-              <Link to="/cart" className="right-part__icon right-part__icon--cart"></Link>
+              <Link 
+                to="/cart" 
+                className={`right-part__icon right-part__icon--cart ${selected === 'Cart' ? 'is-active' : ''}`}
+              ></Link>
             </div>
 
             <div className="right-part__item-box">
-              <Link to="/" className="right-part__icon right-part__icon--menu-burger"></Link>
+              <Link 
+                to="/" 
+                className={`right-part__icon right-part__icon--menu-burger ${selected === 'Menu' ? 'is-active' : ''}`}
+              ></Link>
             </div>
           </div>
         </div>
