@@ -1,6 +1,6 @@
 import './BreadCrumbs.scss';
 
-const BreadCrumbs = () => {
+export const BreadCrumbs = () => {
   return (
     <div className="breadcrumbs">
       <a href="#" className="breadcrumbs__item">
@@ -15,5 +15,3 @@ const BreadCrumbs = () => {
     </div>
   );
 };
-
-export default BreadCrumbs;
