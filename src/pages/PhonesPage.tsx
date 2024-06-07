@@ -14,26 +14,33 @@ const PhonesPage = () => {
 
       <div className="products__filter filter">
         <div className="filter_sortBy sortBy">
-          <p className="sortBy__legend">Sort by</p>
-          <div className="sortBy__select"></div>
+          <p className="sortBy__legend">
+            Sort by
+          </p>
+          <div className='sortBy__select'>
+          </div>
         </div>
 
         <div className="sortBy">
-          <p className="sortBy__legend">Items on page</p>
+          <p className="sortBy__legend">
+            Items on page
+          </p>
 
-          <div className="perPage__select">
-            <div className="perPage__options-wrapper">
-              <div className="perPage__option"></div>
+          <div className='perPage__select'>
+            <div className='perPage__options-wrapper'>
+              <div className="perPage__option">
+                
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+      
       <ul className="products__list">
         <Card />
       </ul>
     </div>
   );
-};
+}
 
 export default PhonesPage;
