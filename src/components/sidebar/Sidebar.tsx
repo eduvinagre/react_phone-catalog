@@ -1,21 +1,18 @@
 // import { NavLink } from 'react-router-dom';
 // import './Sidebar.scss';
 
-// //*import React, { SetStateAction, useContext } from 'react';*//
-// //*import classNames from 'classnames';*//
-// //*import { Logo } from '';*//
-// //*import { FavouritesContext } from '';*//
-// //*import { CartContext } from '';*//
+import React, { SetStateAction, useContext } from 'react';
+import classNames from 'classnames';
+//*import { Logo } from '';*//
+import { AppContext } from '../../context/AppContext';
 
 // type Props = {
 //   isMenuOpen: boolean;
 //   setIsMenuOpen: React.Dispatch<SetStateAction<boolean>>;
 // };
 
-// export const SideNavbar: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
-//   //**const { favourites } = useContext(FavouritesContext);**//
-//   //**const { cartList } = useContext(CartContext);**//
-//   const productsInCart = cartList.reduce((acc, item) => acc + item.quantity, 0);
+export const SideNavbar: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
+  // adicionar as lógicas necessárias do appContext
 
 //   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
 //     classNames('navbar-link', {
@@ -27,19 +24,20 @@
 //       'navbar__footer-button-active': isActive,
 //     });
 
-//   return (
-//     <div
-//       className={classNames({
-//         navbar: isMenuOpen === true,
-//         disabled: !isMenuOpen,
-//       })}
-//     >
-//       <div className="navbar__top">
-//         <Logo />
-//         <div className="header__menu-button" onClick={() => setIsMenuOpen(false)}>
-//           <div className="header__menu-button icon icon-close" />
-//         </div>
-//       </div>
+  return (
+    <div
+      className={classNames({
+        navbar: isMenuOpen === true,
+        disabled: !isMenuOpen,
+      })}
+    >
+      <div className="navbar__top">
+        {/* o que é LOGO? */}
+        <Logo />
+        <div className="header__menu-button" onClick={() => setIsMenuOpen(false)}>
+          <div className="header__menu-button icon icon-close" />
+        </div>
+      </div>
 
 //       <nav className="navbar__list">
 //         <NavLink to="/" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
