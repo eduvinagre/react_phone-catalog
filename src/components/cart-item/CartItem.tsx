@@ -1,7 +1,7 @@
-import imgPhone from '../../../public/img/phones/apple-iphone-11-pro-max/gold/00.webp';
-import closeIcon from '../../../public/img/svg/close.svg';
-import minusIcon from '../../../public/img/svg/minus.svg';
-import plusIcon from '../../../public/img/svg/plus.svg';
+import imgPhone from '/img/phones/apple-iphone-11-pro-max/gold/00.webp';
+import closeIcon from '/img/icons/close.svg';
+import minusIcon from '/img/icons/minus.svg';
+import plusIcon from '/img/icons/plus.svg';
 import './CartItem.scss';
 
 export const CartItem = () => {

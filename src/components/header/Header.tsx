@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.scss';
+import logoIcon from '/img/icons/logo.svg';
 
 export const Header: React.FC = () => {
   const [selected, setSelected] = useState('Home');
@@ -20,7 +21,7 @@ export const Header: React.FC = () => {
         <div className="header__content">
           <div className="header__left-part left-part">
             <Link to="/" className="header__logo">
-              <img src="./img/logo.svg" alt="logo" />
+              <img src={logoIcon} alt="logo" />
             </Link>
 
             <nav className="nav header__nav">
