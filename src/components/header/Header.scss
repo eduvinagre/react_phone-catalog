@@ -202,7 +202,7 @@ $header-height-desktop: 64px;
   &__icon--favorite {
     display: none;
 
-    background-image: url('/img/icons/heart-icon.svg');
+    background-image: url('../../../public/img/icons/favourites-heart-like.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -215,8 +215,8 @@ $header-height-desktop: 64px;
   &__icon--cart {
     display: none;
     position: relative;
-    background-image: url('./img/icons/cart-btn-icon.svg');
 
+    background-image: url('../../../public/img/icons/shopping-bag-cart.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -227,8 +227,7 @@ $header-height-desktop: 64px;
   }
 
   &__icon--menu-burger {
-    background-image: url('/img/icons/menu-burger-icon.svg');
-
+    background-image: url('../../../public/img/icons/menu.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -237,34 +236,6 @@ $header-height-desktop: 64px;
       display: none;
     }
   }
-
-  &__icon--counter {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-
-    @include on-desktop {
-      top: 16.5px;
-      right: 16.5px;
-    }
-
-    width: 14px;
-    height: 14px;
-
-    border-radius: 50%;
-    border: 1px solid $color-black;
-
-    background-color: $color-red;
-    color: $color-white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 9px;
-    font-weight: 700;
-    text-align: center;
-  }
 }
 
 .right-part__icon.is-active::after {
@@ -272,14 +243,14 @@ $header-height-desktop: 64px;
   left: 0;
 }
 
-@include on-tablet {
-  .right-part__icon--counter {
+.right-part__icon--counter {
+  @include on-tablet {
     position: absolute;
-    top: 15px;
-    right: 18px;
+    top: 10px;
+    right: 10px;
 
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
 
     border-radius: 50%;
     border: 1px solid $color-black;
@@ -290,10 +261,16 @@ $header-height-desktop: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
+    font-family: $font-regular;
     font-size: 9px;
-    font-weight: 700;
-    line-height: 11.5px;
-    text-align: center;
+    font-weight: 300;
+  }
+
+  @include on-desktop {
+    top: 18px;
+    right: 18px;
   }
 }
+
+
