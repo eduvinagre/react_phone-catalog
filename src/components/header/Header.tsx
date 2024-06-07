@@ -4,13 +4,12 @@ import './Header.scss';
 
 export const Header: React.FC = () => {
   const [selected, setSelected] = useState('Home');
+  const [counter, setCounter] = useState(3);
   const location = useLocation();
 
   useEffect(() => {
     const pathname = location.pathname;
-    const page =
-      pathname === '/' ? 'Home' : pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2);
-
+    const page = pathname === '/' ? 'Home' : pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2);
     setSelected(page);
   }, [location]);
 
@@ -51,8 +50,9 @@ export const Header: React.FC = () => {
               <Link
                 to="/cart"
                 className={`right-part__icon right-part__icon--cart ${selected === 'Cart' ? 'is-active' : ''}`}
-              ></Link>
-              <div className="right-part__icon--counter"></div>
+              >
+                <div className="right-part__icon--counter">{counter}</div>
+              </Link>
             </div>
 
             <div className="right-part__item-box">
