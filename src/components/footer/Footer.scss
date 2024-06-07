@@ -1,0 +1,111 @@
+@import '../../assets/scss/variables';
+
+.footer {
+  @include pageGrid;
+
+  box-sizing: border-box;
+  padding: 32px 16px;
+  background-color: $color-black;
+  border-top: 1px solid $color-elements;
+  gap: 32px;
+
+  @include on-tablet {
+    align-items: center;
+    padding-inline: 32px;
+  }
+
+  &__logo {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__actions {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 4 / 9;
+    }
+
+    @include on-desktop {
+      grid-column: 9 / 16;
+    }
+  }
+
+  &__top-button {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 9 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 20 / -1;
+    }
+  }
+}
+
+.logo {
+  height: fit-content;
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include on-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  @include on-desktop {
+    gap: 154px;
+  }
+
+  & > .actions__item {
+    @include font-uppercase-desktop;
+
+    text-decoration: none;
+  }
+}
+
+.top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include on-tablet {
+    justify-content: flex-end;
+  }
+
+  &__text {
+    @include font-small-text-desktop;
+
+    color: $color-secondary;
+    margin: 0;
+  }
+
+  &__button {
+    width: 32px;
+    height: 32px;
+    background-color: $color-surface-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 300ms;
+
+    &:hover {
+      background-color: $color-icons;
+      transition-duration: 300ms;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,18 +1,18 @@
 import { Outlet } from 'react-router-dom';
-
-import '../App.css';
+import './default.layout.scss';
+import { Header } from '../components/header/Header';
+import { Footer } from '../components/footer/Footer';
 // import { Navbar } from '../components/Navbar'; COMPONENT SUGGESTION
 
 export const DefaultLayout = () => {
   return (
     <div className="app">
       {/* <Navbar /> */}
+      <Header />
 
-      <div className="section">
-        <div className="container">
-          <Outlet />
-        </div>
-      </div>
+      <Outlet />
+
+      <Footer />
     </div>
   );
 };
