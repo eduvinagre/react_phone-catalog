@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.scss';
+import { useAppContext } from '../../context/AppContext';
 
 export const Header: React.FC = () => {
   const [selected, setSelected] = useState('Home');
-  const [cartCounter, setcartCounter] = useState(3);
+  const [cartCounter, setCartCounter] = useState(3);
   const [favoriteCounter, setFavoriteCounter] = useState(5);
   const location = useLocation();
 
+  const { favorites, cart } = useAppContext();
+
   const logo = 'img/icons/logo.svg';
-  const favoriteIcon = '../../../public/img/icons/'
+
+  useEffect(() => {
+    setFavoriteCounter(favorites.length);
+    setCartCounter(cart.length);
+  }, [favorites, cart]);
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -48,7 +55,10 @@ export const Header: React.FC = () => {
                 to="/favorite"
                 className={`right-part__icon right-part__icon--favorite ${selected === 'Favorite' ? 'is-active' : ''}`}
               >
-                <div className="right-part__icon--counter">{favoriteCounter}</div>
+                {favoriteCounter ? (
+                  <div className="right-part__icon--counter">{favoriteCounter}</div>
+                ) : ('')}
+
               </Link>
             </div>
 
@@ -57,7 +67,10 @@ export const Header: React.FC = () => {
                 to="/cart"
                 className={`right-part__icon right-part__icon--cart ${selected === 'Cart' ? 'is-active' : ''}`}
               >
-                <div className="right-part__icon--counter">{cartCounter}</div>
+                {cartCounter ? (
+                  <div className="right-part__icon--counter">{cartCounter}</div>
+                ) : ('')}
+
               </Link>
             </div>
 
