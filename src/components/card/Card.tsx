@@ -16,7 +16,11 @@ const Card = () => {
   return (
     <>
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -56,7 +60,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -96,7 +104,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -136,7 +148,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -176,7 +192,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -216,7 +236,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -256,7 +280,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -296,7 +324,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -336,7 +368,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="./img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -376,7 +412,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -416,7 +456,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="./img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 
@@ -456,7 +500,11 @@ const Card = () => {
       </li>
 
       <li className="products__card card">
-        <img src="./img/phones/apple-iphone-14-pro/gold/04.webp" alt="" className="card__img" />
+        <img
+          src="/img/phones/apple-iphone-14-pro/gold/04.webp"
+          alt="img-phone"
+          className="card__img"
+        />
 
         <h4 className="card__title">Apple iPhone 14 Pro 128GB Gold (MQ083);</h4>
 

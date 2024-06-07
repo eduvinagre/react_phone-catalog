@@ -38,8 +38,10 @@
 
     width: 66px;
     height: 16px;
-
-    background-image: url('./img/icons/cart-back-button.svg');
+    margin-left: 10px;
+    background-image: url('/img/icons/arrow-left.svg');
+    background-repeat: no-repeat;
+    background-position: left;
   }
 
   &__title {

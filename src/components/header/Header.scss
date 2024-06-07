@@ -72,8 +72,6 @@ $header-height-desktop: 64px;
   }
 
   &__logo img {
-    height: 22px;
-    width: 64px;
     margin: 13px 16px;
 
     @include on-desktop {
@@ -204,7 +202,7 @@ $header-height-desktop: 64px;
   &__icon--favorite {
     display: none;
 
-    background-image: url('./img/icons/heart-icon.svg');
+    background-image: url('/img/icons/heart-icon.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -229,7 +227,7 @@ $header-height-desktop: 64px;
   }
 
   &__icon--menu-burger {
-    background-image: url('./img/icons/menu-burger-icon.svg');
+    background-image: url('/img/icons/menu-burger-icon.svg');
 
     background-position: center;
     background-repeat: no-repeat;
@@ -272,4 +270,30 @@ $header-height-desktop: 64px;
 .right-part__icon.is-active::after {
   width: 100%;
   left: 0;
+}
+
+@include on-tablet {
+  .right-part__icon--counter {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+    border: 1px solid $color-black;
+
+    background-color: $color-red;
+    color: $color-white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 11.5px;
+    text-align: center;
+  }
 }

@@ -1,8 +1,6 @@
 import '../../assets/scss/pages/PhonesPage.scss';
-import '../../assets/scss/components/modal.scss';
-import { BreadCrumbs } from '../../components/bread-crumbs/BreadCrumbs';
-import Card from '../../components/card/Card';
-import { Modal } from '../../components/modal/Modal';
+import Card from '../../components/Card/Card';
+import BreadCrumbs from '../../components/bread-crumbs/BreadCrumbs';
 
 const PhonesPage = () => {
   return (
