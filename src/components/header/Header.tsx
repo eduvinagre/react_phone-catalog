@@ -4,8 +4,12 @@ import './Header.scss';
 
 export const Header: React.FC = () => {
   const [selected, setSelected] = useState('Home');
-  const [counter, setCounter] = useState(3);
+  const [cartCounter, setcartCounter] = useState(3);
+  const [favoriteCounter, setFavoriteCounter] = useState(5);
   const location = useLocation();
+
+  const logo = 'img/icons/logo.svg';
+  const favoriteIcon = '../../../public/img/icons/'
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -19,7 +23,7 @@ export const Header: React.FC = () => {
         <div className="header__content">
           <div className="header__left-part left-part">
             <Link to="/" className="header__logo">
-              <img src="./img/logo.svg" alt="logo" />
+              <img src={logo} alt="logo" />
             </Link>
 
             <nav className="nav header__nav">
@@ -43,7 +47,9 @@ export const Header: React.FC = () => {
               <Link
                 to="/favorite"
                 className={`right-part__icon right-part__icon--favorite ${selected === 'Favorite' ? 'is-active' : ''}`}
-              ></Link>
+              >
+                <div className="right-part__icon--counter">{favoriteCounter}</div>
+              </Link>
             </div>
 
             <div className="right-part__item-box">
@@ -51,7 +57,7 @@ export const Header: React.FC = () => {
                 to="/cart"
                 className={`right-part__icon right-part__icon--cart ${selected === 'Cart' ? 'is-active' : ''}`}
               >
-                <div className="right-part__icon--counter">{counter}</div>
+                <div className="right-part__icon--counter">{cartCounter}</div>
               </Link>
             </div>
 
