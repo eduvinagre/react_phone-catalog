@@ -1,4 +1,4 @@
-import '../../assets/scss/pages/PhonesPage.scss';
+import './PhonesPage.scss';
 import Card from '../../components/card/Card';
 import { BreadCrumbs } from '../../components/bread-crumbs/BreadCrumbs';
 import { Modal } from '../../components/modal/Modal';
